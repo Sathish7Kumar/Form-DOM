@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-sm">
+       <div class="row">
+           <div class="col-1"></div>
+           <div class="col-10">
+               <!-- Heading -->
+               <h2 class="bg-dark text-center text-success">FORM</h2> <br>
+               <!-- Form Tag -->
+               <form action="" class="inputfield" id="forms">
+                   <!-- First Name -->
+                <div class="form-group row">
+                    <label for="fname" class="col-5 col-form-label text-center">First Name</label>
+                    <div class="col-7">
+                        <input type="text" class="form-control text-left" name="fname" id="fname" placeholder="Enter your FirstName..."  required>
+                    </div>
+                </div>
+                <!-- Last Name -->
+                <div class="form-group row">
+                    <label for="lname" class="col-5 col-form-label text-center">Last Name</label>
+                    <div class="col-7">
+                        <input type="text" class="form-control" name="lname" id="lname" placeholder="Enter your LastName..." required>
+                    </div>
+                </div>
+                <!-- Address  -->
+                <div class="form-group row">
+                    <label for="address" class="col-5 col-form-label text-center">Address</label>
+                    <div class="col-7">
+                        <input type="text" class="form-control" name="lname" id="address" name="address" placeholder="Enter your Address..." required>
+                    </div>
+                </div>
+                <!-- pincode -->
+                <div class="form-group row">
+                    <label for="pincode" class="col-5 col-form-label text-center">Pincode</label>
+                    <div class="col-7">
+                        <input type="number" class="form-control" name="lname" id="pincode" name="pincode" required>
+                    </div>
+                </div>
+                <!-- Gender Option  -->
+                <div class="form-group row">
+                    <label for="gender-select" class="col-form-label text-center col-5">Gender</label>
+                    <div class="col-7">
+                        <select name="gender-select" id="gender-select" class="form-control">
+                            <option  value="gender">Choose an option</option>
+                            <option aria-required="true" value="Male">Male</option>
+                            <option aria-required="true" value="Female">Female</option>
+                            <option aria-required="true" value="Others">Others</option> 
+                        </select>
+                    </div>
+                </div> <br>
+                <!-- Food Checkbox -->
+                <div class="form-group row">
+                    <p class="col-form-label text-center col-5"  class="food"> Food <br> Choice of food (must choose at least 2)</p>
+                    <div class="col-7 options">
+                        <input type="checkbox" name="biriyani" id="food1" value="Biriyani"> 
+                        <label for="biriyani">Biriyani</label>
+                        <br>
+                        <input type="checkbox" name="parotta" id="food2" value="Parotta">
+                        <label for="parotta">Parotta</label>
+                        <br>
+                        <input type="checkbox" name="dosa" id="food3" value="Dosa">
+                        <label for="dosa">Dosa</label>
+                        <br>
+                        <input type="checkbox" name="shawarma" id="food4" value="Shawarma">
+                        <label for="shawarma">Shawarma</label>
+                        <br>
+                        <input type="checkbox" name="noodles" id="food5" value="Noodles">
+                        <label for="noodles">Chicken-Noodles</label>
+                    </div>
+                </div>
+                <!-- State  -->
+                <div class="form-group row">
+                    <label for="state" class="col-form-label text-center col-5">State</label>
+                    <div class="col-7">
+                        <input class="form-control" type="text" name="state" id="state" required>
+                    </div>
+                </div> 
+                <!-- Country  -->
+                <div class="form-group row">
+                    <label for="country" class="col-form-label text-center col-5">Country</label>
+                    <div class="col-7">
+                        <input class="form-control" type="text" name="country" id="country" required>
+                    </div>
+                </div>  <br>
+                <input type="submit" class="btn btn-block btn-danger" value="Submit" onclick="{validate()}">
+               </form> <br>
+               <!-- Table  -->
+               <div>           
+                    <div class="table-responsive">
+                        <table class="table table-bordered text-center table-hover" id="datastored">
+                            <thead class="bg-success">
+                                  <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Address</th>
+                                    <th>Pincode</th>
+                                    <th>Gender</th>
+                                    <th>Food Choosen</th>
+                                    <th>State</th>
+                                    <th>Country</th>
+                                  </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+           </div>
+           <div class="col-1"></div>
+       </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
